@@ -1,0 +1,23 @@
+@import '@shopify/polaris-tokens/css/styles.css';
+
+main {
+    color: var(--p-color-text-info);
+    padding: var(--p-space-12);
+}
+
+h1 {
+    margin-top: var(--p-space-0);
+    margin-bottom: var(--p-space-8);
+}
+
+p {
+    margin-bottom: var(--p-space-6);
+}
+
+code {
+    color: var(--p-color-text-info);
+    padding: var(--p-space-05);
+    background-color: var(--p-color-bg-info-strong);
+    font-size: var(--p-font-size-200);
+    border-radius: var(--p-border-radius-1);
+}

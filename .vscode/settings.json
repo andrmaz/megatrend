@@ -1,0 +1,7 @@
+{
+	"editor.fontFamily": "",
+	"cSpell.words": ["megatrend", "Typegen"],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.rome": true
+	}
+}
