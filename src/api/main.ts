@@ -1,6 +1,5 @@
 import { BalanceSheet } from "../types/balance-sheet";
 import { CashFlows } from "../types/cash-flows";
-import { defaultFilingOrder, defaultFormType } from "../utils/constants";
 import { Filings } from "../types/filings";
 import { FinancialStatementsDisclosures } from "../types/financial-statements-disclosures";
 import { Income } from "../types/income";
@@ -11,6 +10,7 @@ import { ManagerHoldings } from "../types/manager-holdings";
 import { ManagerOwnership } from "../types/manager-ownership";
 import { Operations } from "../types/operations";
 import { TrendingStocks } from "../types/trending-stocks";
+import { defaultFilingOrder, defaultFormType } from "../utils/constants";
 import { query } from "../utils/fetch";
 
 /**
