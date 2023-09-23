@@ -1,15 +1,15 @@
-export interface TrendingStocks {
-	Company: string;
-	Identifier: string;
-	FilingDate: Date;
-	Pagepath: string;
-	Pagetitle: Pagetitle;
-	Score: number;
-	Rank: number;
-	AccessionNumber?: string;
+export interface TrendingStock {
+	company: string;
+	identifier: string;
+	filingDate: Date;
+	pagePath: string;
+	pageTitle: PageTitle;
+	score: number;
+	rank: number;
+	accessionNumber?: string;
 }
 
-export type Pagetitle =
+export type PageTitle =
 	| "10K Annual Reports & 10Q SEC Filings | Last10K"
 	| "10-K Annual Report Wed Feb 27 2013"
 	| "10-K Annual Report Wed Feb 26 2014"

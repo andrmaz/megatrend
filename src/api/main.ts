@@ -9,7 +9,7 @@ import { LateFilings } from "../types/late-filings";
 import { ManagerHoldings } from "../types/manager-holdings";
 import { ManagerOwnership } from "../types/manager-ownership";
 import { Operations } from "../types/operations";
-import { TrendingStocks } from "../types/trending-stocks";
+import { TrendingStock } from "../types/trending-stocks";
 import { defaultFilingOrder, defaultFormType } from "../utils/constants";
 import { query } from "../utils/fetch";
 
@@ -189,7 +189,7 @@ async function queryManagerOwnership(ticker: string) {
  */
 async function queryTrendingStocks() {
 	try {
-		return await query<TrendingStocks>("/app/analytics");
+		return await query<TrendingStock[]>("/app/analytics");
 	} catch (error) {
 		console.error(error);
 	}
