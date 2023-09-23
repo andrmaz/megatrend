@@ -22,9 +22,13 @@
     "test:e2e": "CYPRESS_SUPPORT=y start-server-and-test develop http://localhost:8000 cy:open"
   },
   "dependencies": {
+    "@linaria/core": "^4.5.4",
+    "@linaria/react": "^4.5.4",
     "@shopify/polaris-tokens": "^7.5.2",
     "gatsby": "^5.11.0",
+    "gatsby-plugin-linaria": "^4.0.2",
     "gatsby-plugin-sass": "^6.11.0",
+    "gatsby-plugin-typescript": "^5.12.0",
     "node-fetch": "^2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
