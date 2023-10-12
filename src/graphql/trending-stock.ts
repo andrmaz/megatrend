@@ -2,45 +2,36 @@ import { TrendingStock } from "../types/trending-stocks";
 import {
 	GraphQLInt,
 	GraphQLObjectType,
-	GraphQLScalarType,
 	GraphQLString,
 } from "graphql";
 
 export const TrendingStockType = new GraphQLObjectType<TrendingStock>({
 	name: "TrendingStock",
-	description: "Somebody that you used to know",
+	description: "Returns the top trending stocks on Last10K.com right now with the most viewed 10-K / 20-F / 40-F Annual Reports and 10-Q Quarterly SEC Filings.",
 	fields: () => ({
-		company: {
+		Company: {
 			type: GraphQLString,
-			resolve: (stock) => stock.company,
 		},
-		identifier: {
+		Identifier: {
 			type: GraphQLString,
-			resolve: (stock) => stock.identifier,
 		},
-		filingDate: {
-			type: new GraphQLScalarType({ name: "date" }),
-			resolve: (stock) => stock.filingDate,
-		},
-		pagePath: {
+		FilingDate: {
 			type: GraphQLString,
-			resolve: (stock) => stock.pagePath,
 		},
-		pageTitle: {
+		Pagepath: {
 			type: GraphQLString,
-			resolve: (stock) => stock.pageTitle,
 		},
-		score: {
+		Pagetitle: {
+			type: GraphQLString,
+		},
+		Score: {
 			type: GraphQLInt,
-			resolve: (stock) => stock.score,
 		},
-		rank: {
+		Rank: {
 			type: GraphQLInt,
-			resolve: (stock) => stock.rank,
 		},
-		accessionNumber: {
+		AccessionNumber: {
 			type: GraphQLString,
-			resolve: (stock) => stock.accessionNumber,
 		},
 	}),
 });

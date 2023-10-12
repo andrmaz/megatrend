@@ -17,9 +17,9 @@ export interface Attributes {
 
 export interface Result {
 	FormType: FormType;
-	AcceptanceDate: Date;
-	FilingDate: Date;
-	Period: Date;
+	AcceptanceDate: string;
+	FilingDate: string;
+	Period: string;
 	AccessionNumber: string;
 	Ticker?: string;
 	CIK: string;

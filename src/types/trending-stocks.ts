@@ -1,12 +1,12 @@
 export interface TrendingStock {
-	company: string;
-	identifier: string;
-	filingDate: Date;
-	pagePath: string;
-	pageTitle: PageTitle;
-	score: number;
-	rank: number;
-	accessionNumber?: string;
+	Company: string;
+	Identifier: string;
+	FilingDate: String;
+	Pagepath: string;
+	Pagetitle: PageTitle;
+	Score: number;
+	Rank: number;
+	AccessionNumber?: string;
 }
 
 export type PageTitle =
