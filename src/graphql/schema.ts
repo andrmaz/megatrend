@@ -1,4 +1,11 @@
-import { queryBalanceSheet, queryFilings, queryInsiderTrades, queryLateFilings, queryOperations, queryTrendingStocks } from "../api/main";
+import {
+	queryBalanceSheet,
+	queryFilings,
+	queryInsiderTrades,
+	queryLateFilings,
+	queryOperations,
+	queryTrendingStocks,
+} from "../api/main";
 import { BalanceSheetType } from "./balance-sheet";
 import { FilingsType } from "./filings";
 import { InsiderTradesType } from "./insider-trades";

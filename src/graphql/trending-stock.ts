@@ -1,13 +1,10 @@
 import { TrendingStock } from "../types/trending-stocks";
-import {
-	GraphQLInt,
-	GraphQLObjectType,
-	GraphQLString,
-} from "graphql";
+import { GraphQLInt, GraphQLObjectType, GraphQLString } from "graphql";
 
 export const TrendingStockType = new GraphQLObjectType<TrendingStock>({
 	name: "TrendingStock",
-	description: "Returns the top trending stocks on Last10K.com right now with the most viewed 10-K / 20-F / 40-F Annual Reports and 10-Q Quarterly SEC Filings.",
+	description:
+		"Returns the top trending stocks on Last10K.com right now with the most viewed 10-K / 20-F / 40-F Annual Reports and 10-Q Quarterly SEC Filings.",
 	fields: () => ({
 		Company: {
 			type: GraphQLString,
