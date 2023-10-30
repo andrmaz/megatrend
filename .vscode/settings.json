@@ -2,6 +2,8 @@
 	"editor.fontFamily": "",
 	"cSpell.words": ["megatrend", "Typegen"],
 	"editor.codeActionsOnSave": {
+		"quickfix.rome": true,
 		"source.organizeImports.rome": true
-	}
+	},
+	"editor.formatOnSave": true
 }

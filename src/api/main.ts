@@ -9,7 +9,7 @@ import { LateFilings } from "../types/late-filings";
 import { ManagerHoldings } from "../types/manager-holdings";
 import { ManagerOwnership } from "../types/manager-ownership";
 import { Operations } from "../types/operations";
-import { TrendingStocks } from "../types/trending-stocks";
+import { TrendingStock } from "../types/trending-stocks";
 import { defaultFilingOrder, defaultFormType } from "../utils/constants";
 import { query } from "../utils/fetch";
 
@@ -121,7 +121,7 @@ async function queryIncome(
 }
 
 /**
- * Returns a company's most recent statement of operations showing how they balance costs with revenue
+ * Returns a company's most recent statement of operations showing how they balance costs with revenue.
  * @param  {string} ticker Publicly traded company's stock symbol
  * @param  {} formType 10-K = Annual Report (default) | 10-Q = Quarterly Report
  * @param  {} filingOrder Retrieve an older financial statement by specifying number of filings to go back. For example, to retrieve the second to most recent filing, specify a filingOrder value of 1. By default, the most recent filing is returned (filingOrder = 0)
@@ -189,7 +189,7 @@ async function queryManagerOwnership(ticker: string) {
  */
 async function queryTrendingStocks() {
 	try {
-		return await query<TrendingStocks>("/app/analytics");
+		return await query<TrendingStock[]>("/app/analytics");
 	} catch (error) {
 		console.error(error);
 	}

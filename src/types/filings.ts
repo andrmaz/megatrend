@@ -25,8 +25,8 @@ export interface Company {
 export interface Result {
 	name: string;
 	accessionNumber: string;
-	filingDate: Date;
-	period?: Date;
+	filingDate: string;
+	period?: string;
 	formType: string;
 	url: string;
 }

@@ -1,14 +1,32 @@
-import { queryLateFilings } from "./src/api/main";
+import { queryLateFilings, queryTrendingStocks } from "./src/api/main";
 import type { GatsbyNode } from "gatsby"
-import path from "node:path";
+import path from "path";
 
-export const onCreatePage: GatsbyNode['createPages'] = async ({
-		actions: { createPage },
-	}) => {
-	const companies = await queryLateFilings()
-	createPage({
-		path: "/",
-		component: path.resolve('src/pages/index.tsx'),
-		context: { companies },
-	});
+/* export const createSchemaCustomization: GatsbyNode[`createSchemaCustomization`] = ({ actions }) => {
+  const { createTypes } = actions
+  createTypes(QueryType)
+} */
+
+export const onPreInit: GatsbyNode['onPreInit'] = async () => {
+  if (process.env.NODE_ENV === 'development') {
+    const { server } = await import('./src/mocks/server')
+    server.listen()
+    console.info('Mock services started');
+  }
+}
+
+export const createPages: GatsbyNode["createPages"] = async ({ actions: { createPage } }) => {
+  const [trendingStocks, lateFilings] = await Promise.all([queryTrendingStocks(), queryLateFilings()])
+
+  createPage({
+    path: "/",
+    component: path.resolve("./src/templates/index.tsx"),
+    context: { trendingStocks },
+  })
+
+  createPage({
+    path: "/filings",
+    component: path.resolve("./src/templates/filings.tsx"),
+    context: { lateFilings },
+  })
 }

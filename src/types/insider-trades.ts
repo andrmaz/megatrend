@@ -18,15 +18,15 @@ export interface Attributes {
 export interface Result {
 	CIK: string;
 	AccessionNumber: string;
-	FilingDate: Date;
-	AcceptanceDate: Date;
+	FilingDate: string;
+	AcceptanceDate: string;
 	Filename: string;
 	Ticker: string;
 	CompanyName: string;
 	SIC: number;
 	Owner: string;
 	Relationship: string;
-	TransactionDate: Date;
+	TransactionDate: string;
 	TransactionType: string;
 	Cost: number;
 	Shares: number;

@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import type { GatsbyConfig } from "gatsby";
 
-dotenv.config({ path: `.env.${process.env.NODE_ENV}`})
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
 
 const config: GatsbyConfig = {
 	siteMetadata: {
@@ -15,11 +15,18 @@ const config: GatsbyConfig = {
 	plugins: [
 		"gatsby-plugin-typescript",
 		{
-		resolve: 'gatsby-plugin-linaria',
-		options: {
-			extractCritical: true, // false by default.
+			resolve: 'gatsby-plugin-linaria',
+			options: {
+				extractCritical: true, // false by default.
+			},
 		},
-		}
+		/* {
+			resolve: "gatsby-source-graphql",
+			options: {
+				url: "http://localhost:8000/___graphql", 
+				schema: require("./src/graphql/schema"), 
+			},
+		}, */
 	],
 };
 

@@ -26,9 +26,9 @@ export interface Company {
 export interface Filing {
 	accessionNumber: string;
 	filingCount: number;
-	filingDate: Date;
+	filingDate: string;
 	name: string;
-	period: Date;
+	period: string;
 	source: string;
 }
 
