@@ -1,5 +1,5 @@
 import { LateFilings } from "../types/late-filings";
-import { path } from "../utils/constants";
+import { Path } from "../utils/constants";
 import { formatStringDate } from "../utils/date";
 import { css } from "@linaria/core";
 import { tokens } from "@shopify/polaris-tokens";
@@ -14,7 +14,7 @@ const Filings = (props: Props) => {
 			<header className={header}>
 				<h1 className={title}>Megatrend</h1>
 				<nav className={navigation}>
-					<a href={path.home} className={link}>
+					<a href={Path.Home} className={link}>
 						Trending Stocks
 					</a>
 				</nav>

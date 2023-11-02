@@ -1,11 +1,7 @@
 import { queryLateFilings, queryTrendingStocks } from "./src/api/main";
+import { Path } from "./src/utils/constants";
 import type { GatsbyNode } from "gatsby"
 import path from "path";
-
-/* export const createSchemaCustomization: GatsbyNode[`createSchemaCustomization`] = ({ actions }) => {
-  const { createTypes } = actions
-  createTypes(QueryType)
-} */
 
 export const onPreInit: GatsbyNode['onPreInit'] = async () => {
   if (process.env.NODE_ENV === 'development') {
@@ -19,13 +15,13 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions: { create
   const [trendingStocks, lateFilings] = await Promise.all([queryTrendingStocks(), queryLateFilings()])
 
   createPage({
-    path: "/",
+    path: Path.Home,
     component: path.resolve("./src/templates/index.tsx"),
     context: { trendingStocks },
   })
 
   createPage({
-    path: "/filings",
+    path: Path.Filings,
     component: path.resolve("./src/templates/filings.tsx"),
     context: { lateFilings },
   })
