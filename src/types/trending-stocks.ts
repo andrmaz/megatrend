@@ -1,7 +1,7 @@
 export interface TrendingStock {
 	Company: string;
 	Identifier: string;
-	FilingDate: String;
+	FilingDate: string;
 	Pagepath: string;
 	Pagetitle: PageTitle;
 	Score: number;
