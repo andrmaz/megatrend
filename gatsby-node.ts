@@ -1,6 +1,6 @@
-import { queryLateFilings, queryTrendingStocks } from "./src/api/main";
-import type { GatsbyNode } from "gatsby"
 import path from "path";
+import type { GatsbyNode } from "gatsby"
+import { queryLateFilings, queryTrendingStocks } from "./src/api/main";
 
 /* export const createSchemaCustomization: GatsbyNode[`createSchemaCustomization`] = ({ actions }) => {
   const { createTypes } = actions

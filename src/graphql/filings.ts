@@ -1,4 +1,10 @@
 import {
+	GraphQLInt,
+	GraphQLList,
+	GraphQLObjectType,
+	GraphQLString,
+} from "graphql";
+import {
 	Attributes,
 	Company,
 	Data,
@@ -6,12 +12,6 @@ import {
 	Meta,
 	Result,
 } from "../types/filings";
-import {
-	GraphQLInt,
-	GraphQLList,
-	GraphQLObjectType,
-	GraphQLString,
-} from "graphql";
 
 const MetaType = new GraphQLObjectType<Meta>({
 	name: "Meta",

@@ -1,3 +1,4 @@
+import { GraphQLList, GraphQLObjectType, GraphQLSchema } from "graphql";
 import {
 	queryBalanceSheet,
 	queryFilings,
@@ -12,7 +13,6 @@ import { InsiderTradesType } from "./insider-trades";
 import { LateFilingsType } from "./late-filings";
 import { OperationsType } from "./operations";
 import { TrendingStockType } from "./trending-stock";
-import { GraphQLList, GraphQLObjectType, GraphQLSchema } from "graphql";
 
 export const QueryType = new GraphQLObjectType({
 	name: "Query",

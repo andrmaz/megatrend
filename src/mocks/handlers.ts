@@ -1,3 +1,4 @@
+import { rest } from "msw";
 import { API_URL } from "../config/env";
 import {
 	balanceSheet,
@@ -7,7 +8,6 @@ import {
 	operations,
 	trendingStocks,
 } from "./data";
-import { rest } from "msw";
 
 export const handlers = [
 	rest.get(`${API_URL}/app/analytics`, (req, res, ctx) => {

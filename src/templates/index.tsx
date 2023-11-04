@@ -1,11 +1,11 @@
-import "../styles/globals";
-import { TrendingStock } from "../types/trending-stocks";
-import { path } from "../utils/constants";
-import { formatStringDate } from "../utils/date";
 import { css } from "@linaria/core";
 import { tokens } from "@shopify/polaris-tokens";
 import { type HeadFC, PageProps } from "gatsby";
 import * as React from "react";
+import "../styles/globals";
+import { TrendingStock } from "../types/trending-stocks";
+import { path } from "../utils/constants";
+import { formatStringDate } from "../utils/date";
 
 type Props = PageProps<unknown, { trendingStocks: TrendingStock[] }>;
 

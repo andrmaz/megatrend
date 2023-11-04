@@ -1,16 +1,16 @@
 import {
+	GraphQLInt,
+	GraphQLList,
+	GraphQLObjectType,
+	GraphQLString,
+} from "graphql";
+import {
 	Attributes,
 	Data,
 	LateFilings,
 	Meta,
 	Result,
 } from "../types/late-filings";
-import {
-	GraphQLInt,
-	GraphQLList,
-	GraphQLObjectType,
-	GraphQLString,
-} from "graphql";
 
 const MetaType = new GraphQLObjectType<Meta>({
 	name: "Meta",
