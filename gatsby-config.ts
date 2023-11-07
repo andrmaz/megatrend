@@ -20,13 +20,6 @@ const config: GatsbyConfig = {
 				extractCritical: true, // false by default.
 			},
 		},
-		/* {
-			resolve: "gatsby-source-graphql",
-			options: {
-				url: "http://localhost:8000/___graphql", 
-				schema: require("./src/graphql/schema"), 
-			},
-		}, */
 	],
 };
 
