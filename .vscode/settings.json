@@ -1,9 +1,10 @@
 {
 	"editor.fontFamily": "",
 	"cSpell.words": ["megatrend", "Typegen"],
+	"editor.defaultFormatter": "biomejs.biome",
 	"editor.codeActionsOnSave": {
-		"quickfix.rome": true,
-		"source.organizeImports.rome": true
+		"quickfix.biome": true,
+    	"source.organizeImports.biome": true
 	},
 	"editor.formatOnSave": true
 }

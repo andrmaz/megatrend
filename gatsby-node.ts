@@ -1,7 +1,7 @@
+import path from "path";
+import type { GatsbyNode } from "gatsby"
 import { queryLateFilings, queryTrendingStocks } from "./src/api/main";
 import { Path } from "./src/utils/constants";
-import type { GatsbyNode } from "gatsby"
-import path from "path";
 
 export const onPreInit: GatsbyNode['onPreInit'] = async () => {
   if (process.env.NODE_ENV === 'development') {

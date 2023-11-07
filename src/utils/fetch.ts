@@ -1,5 +1,5 @@
-import { API_HOST, API_KEY, API_URL } from "../config/env";
 import fetch, { RequestInit } from "node-fetch";
+import { API_HOST, API_KEY, API_URL } from "../config/env";
 
 async function query<T>(
 	path: string,

@@ -1,5 +1,5 @@
-import { TrendingStock } from "../types/trending-stocks";
 import { GraphQLInt, GraphQLObjectType, GraphQLString } from "graphql";
+import { TrendingStock } from "../types/trending-stocks";
 
 export const TrendingStockType = new GraphQLObjectType<TrendingStock>({
 	name: "TrendingStock",
