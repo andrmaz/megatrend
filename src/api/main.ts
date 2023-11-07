@@ -10,7 +10,7 @@ import { ManagerHoldings } from "../types/manager-holdings";
 import { ManagerOwnership } from "../types/manager-ownership";
 import { Operations } from "../types/operations";
 import { TrendingStock } from "../types/trending-stocks";
-import { defaultFilingOrder, defaultFormType } from "../utils/constants";
+import { DefaultFilingOrder, DefaultFormType } from "../utils/constants";
 import { query } from "../utils/fetch";
 
 /**
@@ -66,8 +66,8 @@ async function queryFinancialStatementsDisclosures(
  */
 async function queryBalanceSheet(
 	ticker: string,
-	formType = defaultFormType,
-	filingOrder = defaultFilingOrder,
+	formType = DefaultFormType,
+	filingOrder = DefaultFilingOrder,
 ) {
 	try {
 		return await query<BalanceSheet>(
@@ -87,8 +87,8 @@ async function queryBalanceSheet(
  */
 async function queryCashFlows(
 	ticker: string,
-	formType = defaultFormType,
-	filingOrder = defaultFilingOrder,
+	formType = DefaultFormType,
+	filingOrder = DefaultFilingOrder,
 ) {
 	try {
 		return await query<CashFlows>(
@@ -108,8 +108,8 @@ async function queryCashFlows(
  */
 async function queryIncome(
 	ticker: string,
-	formType = defaultFormType,
-	filingOrder = defaultFilingOrder,
+	formType = DefaultFormType,
+	filingOrder = DefaultFilingOrder,
 ) {
 	try {
 		return await query<Income>(
@@ -129,8 +129,8 @@ async function queryIncome(
  */
 async function queryOperations(
 	ticker: string,
-	formType = defaultFormType,
-	filingOrder = defaultFilingOrder,
+	formType = DefaultFormType,
+	filingOrder = DefaultFilingOrder,
 ) {
 	try {
 		return await query<Operations>(

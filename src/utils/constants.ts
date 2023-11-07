@@ -1,3 +1,3 @@
-export const defaultFormType = "10-K";
-export const defaultFilingOrder = 0;
-export const path = { home: "/", filings: "/filings" } as const;
+export const DefaultFormType = "10-K";
+export const DefaultFilingOrder = 0;
+export const Path = { Home: "/", Filings: "/filings" } as const;
