@@ -2,6 +2,87 @@ import { css } from "@linaria/core";
 
 export const globals = css`
   :global() {
+	/* rokkitt-200 - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: normal;
+		font-weight: 200;
+		src: url('../fonts/rokkitt-v36-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-200italic - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: italic;
+		font-weight: 200;
+		src: url('../fonts/rokkitt-v36-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-regular - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: normal;
+		font-weight: 400;
+		src: url('../fonts/rokkitt-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-italic - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: italic;
+		font-weight: 400;
+		src: url('../fonts/rokkitt-v36-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-600 - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: normal;
+		font-weight: 600;
+		src: url('../fonts/rokkitt-v36-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-600italic - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: italic;
+		font-weight: 600;
+		src: url('../fonts/rokkitt-v36-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-800 - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: normal;
+		font-weight: 800;
+		src: url('../fonts/rokkitt-v36-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* rokkitt-800italic - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Rokkitt';
+		font-style: italic;
+		font-weight: 800;
+		src: url('../fonts/rokkitt-v36-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* niconne-regular - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Niconne';
+		font-style: normal;
+		font-weight: 400;
+		src: url('../fonts/niconne-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+	/* telex-regular - latin */
+	@font-face {
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+		font-family: 'Telex';
+		font-style: normal;
+		font-weight: 400;
+		src: url('../fonts/telex-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	}
+
     /* Box sizing rules */
 	*,
 	*::before,
@@ -73,6 +154,18 @@ export const globals = css`
 	/* Anything that has been anchored to should have extra scroll margin */
 	:target {
 	scroll-margin-block: 5ex;
+	}
+
+	h1, h2 {
+		font-family: 'Telex';
+	}
+
+	h3, h4, h5, h6 {
+		font-family: 'Niconne';
+	}
+
+	body {
+		font-family: 'Rokkitt';
 	}
   }
 `;
