@@ -84,9 +84,8 @@ const subtitle = css`
 	font-size: ${tokens.font["font-size-500"]};
 `;
 const card = css`
-	background-color: ${tokens.color["color-bg-secondary-experimental"]};
-	border-radius: ${tokens.border["border-radius-5"]};
-	border: ${tokens.border["border-width-4"]} solid ${tokens.color["color-border"]};
+	border-bottom: ${tokens.border["border-width-4"]} solid ${tokens.color["color-border"]};
+	border-left: ${tokens.border["border-width-4"]} solid ${tokens.color["color-border"]};
 	min-width: 300px;
 	padding: ${tokens.space["space-4"]};
 `;

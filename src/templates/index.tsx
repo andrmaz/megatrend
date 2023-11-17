@@ -2,10 +2,12 @@ import { css } from "@linaria/core";
 import { tokens } from "@shopify/polaris-tokens";
 import { type HeadFC, PageProps } from "gatsby";
 import * as React from "react";
+import { TrendingDown, TrendingUp } from 'react-feather';
 import "../styles/globals";
 import { TrendingStock } from "../types/trending-stocks";
 import { Path } from "../utils/constants";
 import { formatStringDate } from "../utils/date";
+import { isTrendingUp } from "../utils/math";
 
 type Props = PageProps<unknown, { trendingStocks: TrendingStock[] }>;
 
@@ -35,6 +37,9 @@ const IndexPage = (props: Props) => {
 								</div>
 								<span>Score: </span>
 								<b>{stock.Score}</b>
+								<i className={icon}>
+									{isTrendingUp() ? <TrendingUp color="green"/> : <TrendingDown color="red"/>}
+								</i>
 							</article>
 						);
 					})}
@@ -80,9 +85,10 @@ const subtitle = css`
 	font-size: ${tokens.font["font-size-500"]};
 `;
 const card = css`
-	background-color: ${tokens.color["color-bg-secondary-experimental"]};
+	background-color: ${tokens.color["color-bg-app-selected"]};
 	border-radius: ${tokens.border["border-radius-5"]};
 	border: ${tokens.border["border-width-4"]} solid ${tokens.color["color-border"]};
+	box-shadow: ${tokens.shadow["shadow-lg"]};
 	min-width: 300px;
 	padding: ${tokens.space["space-4"]};
 `;
@@ -101,6 +107,9 @@ const company = css`
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+`;
+const icon = css`
+	float: right;
 `;
 
 export default IndexPage;
