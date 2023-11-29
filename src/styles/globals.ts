@@ -156,12 +156,8 @@ export const globals = css`
 	scroll-margin-block: 5ex;
 	}
 
-	h1, h2 {
+	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Telex';
-	}
-
-	h3, h4, h5, h6 {
-		font-family: 'Niconne';
 	}
 
 	body {

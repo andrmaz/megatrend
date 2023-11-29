@@ -1,6 +1,6 @@
 import path from "path";
 import type { GatsbyNode } from "gatsby"
-import { queryLateFilings, queryTrendingStocks } from "./src/api/main";
+import { queryBalanceSheet, queryLateFilings, queryTrendingStocks } from "./src/api/main";
 import { Path } from "./src/utils/constants";
 
 export const onPreInit: GatsbyNode['onPreInit'] = async () => {
@@ -12,7 +12,7 @@ export const onPreInit: GatsbyNode['onPreInit'] = async () => {
 }
 
 export const createPages: GatsbyNode["createPages"] = async ({ actions: { createPage } }) => {
-  const [trendingStocks, lateFilings] = await Promise.all([queryTrendingStocks(), queryLateFilings()])
+  const [trendingStocks, lateFilings, balanceSheet] = await Promise.all([queryTrendingStocks(), queryLateFilings(), queryBalanceSheet("msft")])
 
   createPage({
     path: Path.Home,
@@ -24,5 +24,11 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions: { create
     path: Path.Filings,
     component: path.resolve("./src/templates/filings.tsx"),
     context: { lateFilings },
+  })
+
+  createPage({
+    path: Path.Balance,
+    component: path.resolve("./src/templates/balance-sheet.tsx"),
+    context: { balanceSheet },
   })
 }
