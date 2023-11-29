@@ -2,7 +2,7 @@ import { css } from "@linaria/core";
 import { tokens } from "@shopify/polaris-tokens";
 import { type HeadFC, PageProps } from "gatsby";
 import * as React from "react";
-import { TrendingDown, TrendingUp } from 'react-feather';
+import { TrendingDown, TrendingUp } from "react-feather";
 import "../styles/globals";
 import { TrendingStock } from "../types/trending-stocks";
 import { Path } from "../utils/constants";
@@ -38,7 +38,11 @@ const IndexPage = (props: Props) => {
 								<span>Score: </span>
 								<b>{stock.Score}</b>
 								<i className={icon}>
-									{isTrendingUp() ? <TrendingUp color="green"/> : <TrendingDown color="red"/>}
+									{isTrendingUp() ? (
+										<TrendingUp color="green" />
+									) : (
+										<TrendingDown color="red" />
+									)}
 								</i>
 							</article>
 						);
